@@ -191,12 +191,15 @@ bindsym XF86MonBrightnessUp exec light -A 5
 # lock screen
 bindsym $sup+l exec i3lock-wrapper
 
-# 1339.cf
-bindsym Control+Shift+2 exec limfshot current # upload current window
-bindsym Control+Shift+3 exec limfshot desktop # upload desktop
-bindsym Control+Shift+4 exec limfshot # upload selection
+# uploading utils
+bindsym Control+Shift+2 exec shotup current # upload current window
+bindsym Control+Shift+3 exec shotup desktop # upload desktop
+bindsym Control+Shift+4 exec shotup # upload selection
 # bindsym Control+Shift+5 # upload clipboard
-bindsym Control+Shift+U exec limffile # upload file
+bindsym Control+Shift+U exec fileup # upload file
+
+# firefox profile selector
+bindsym $sup+f exec firefox-profile-launcher
 
 client.unfocused #000000 #222222 #888888 #292d2e
 

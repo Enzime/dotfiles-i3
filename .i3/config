@@ -22,12 +22,7 @@ font pango:DejaVu Sans Mono 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-new_window 1pixel
-new_window pixel 5
-#new_window none
-
-gaps inner 10
-gaps outer 10
+new_window pixel 1
 
 for_window [instance="^floating$"] floating enable
 for_window [instance="^osu!.exe$" title="^osu!cuttingedge .*"] floating enable, fullscreen
@@ -79,7 +74,6 @@ bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-bindsym $mod+Shift+f exec sh -c "i3 gaps outer current set 0 && i3 gaps inner current set 0"
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -201,7 +195,14 @@ bindsym Control+Shift+U exec fileup # upload file
 # firefox profile selector
 bindsym $sup+f exec firefox-profile-launcher
 
-client.unfocused #000000 #222222 #888888 #292d2e
+# class                 border  backgr. text    indicator
+client.focused          #4c7899 #e61f00 #ffffff #00ccff
+client.focused_inactive #333333 #0a0a0a #ffffff #484e50
+client.unfocused        #333333 #0d0c0c #888888 #292d2e
+client.urgent           #2f343a #900000 #ffffff #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000
+
+client.background       #ffffff
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

@@ -123,23 +123,23 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # switch workspaces
-bindsym $mod+Control+Left exec i3-output-switcher prev
-bindsym $mod+Control+Right exec i3-output-switcher next
+bindsym $mod+Control+Left exec i3-ws prev
+bindsym $mod+Control+Right exec i3-ws next
 
-bindsym $mod+Control+a exec i3-output-switcher prev
-bindsym $mod+Control+f exec i3-output-switcher next
+bindsym $mod+Control+a exec i3-ws prev
+bindsym $mod+Control+f exec i3-ws next
 
-bindsym $mod+Control+h exec i3-output-switcher prev
-bindsym $mod+Control+l exec i3-output-switcher next
+bindsym $mod+Control+h exec i3-ws prev
+bindsym $mod+Control+l exec i3-ws next
 
-bindsym $mod+Control+Shift+Left exec i3-output-wss prev
-bindsym $mod+Control+Shift+Right exec i3-output-wss next
+bindsym $mod+Control+Shift+Left exec i3-ws --ws prev
+bindsym $mod+Control+Shift+Right exec i3-ws --ws next
 
-bindsym $mod+Control+Shift+a exec i3-output-wss prev
-bindsym $mod+Control+Shift+f exec i3-output-wss next
+bindsym $mod+Control+Shift+a exec i3-ws --ws prev
+bindsym $mod+Control+Shift+f exec i3-ws --ws next
 
-bindsym $mod+Control+Shift+h exec i3-output-wss prev
-bindsym $mod+Control+Shift+l exec i3-output-wss next
+bindsym $mod+Control+Shift+h exec i3-ws --ws prev
+bindsym $mod+Control+Shift+l exec i3-ws --ws next
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

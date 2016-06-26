@@ -219,6 +219,9 @@ bindsym $sup+Control+f exec firefox-profile-launcher
 # virtualbox vm selector
 bindsym $sup+Control+v exec virtualbox-launcher
 
+# password manager
+bindsym $mod+x exec passmenu
+
 # class                 border  backgr. text    indicator
 client.focused          #4c7899 #e61f00 #ffffff #00ccff
 client.focused_inactive #333333 #0a0a0a #ffffff #484e50

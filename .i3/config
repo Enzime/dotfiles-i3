@@ -1,9 +1,12 @@
 # i3 config file (v4)
-#
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# Modifier keys! :)
+#
+# Hyper_L in the position of Alt_L
 set $mod Mod3
+# Alt_L pretending to be Hyper_L
 set $hyp Mod1
+# good ol' Command key :^)
 set $sup Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -29,34 +32,81 @@ bindsym $mod+Shift+Return exec termite --name floating
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
+# ---- ROFI ----
 bindsym $mod+d exec rofi -show run
 bindsym $mod+w exec rofi -show window
+# bindsym $sup+Control+f exec firefox-profile-launcher
+# bindsym $sup+Control+v exec virtualbox-launcher
 
-# change focus
-bindsym $mod+a focus left
-bindsym $mod+s focus down
-# bindsym $mod+d focus up # can't canibalize rofi binding, not just yet.
-bindsym $mod+f focus right
 
-# alternatively, you can use the cursor keys:
-bindsym $sup+a exec i3-ws prev
-# bindsym $mod+Down focus down
-# bindsym $mod+Up focus up
-bindsym $sup+f exec i3-ws next
+# ---- CHANGE FOCUS ----
+# change window focus
+#
+# keyboard bindings
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
-# move focused window
-bindsym $mod+Shift+A move left
-bindsym $mod+Shift+S move down
-bindsym $mod+Shift+D move up
-bindsym $mod+Shift+F move right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
 
-# alternatively, you can use the cursor keys:
-# bindsym $mod+Shift+Left move left
-# bindsym $mod+Shift+Down move down
-# bindsym $mod+Shift+Up move up
-# bindsym $mod+Shift+Right move right
+# mouse bindings
+bindsym $sup+a focus left
+bindsym $sup+s focus down
+bindsym $sup+d focus up
+bindsym $sup+f focus right
 
+
+# change workspace on this output
+#
+# keyboard bindings
+
+# mouse bindings
+bindsym $hyp+a exec i3-ws --ws prev
+bindsym $hyp+f exec i3-ws --ws next
+
+
+# change output focus
+#
+# keyboard bindings
+
+# mouse bindings
+bindsym $sup+Control+a exec i3-ws prev
+bindsym $sup+Control+f exec i3-ws next
+
+
+# ---- MOVE WINDOWS ----
+# move focused window within workspaces
+#
+# keyboard bindings
+
+# mouse bindings
+bindsym $sup+Shift+a move left
+bindsym $sup+Shift+s move down
+bindsym $sup+Shift+d move up
+bindsym $sup+Shift+f move right
+
+
+# move focused window between outputs
+#
+# keyboard bindings
+
+# mouse bindings
+bindsym $hyp+Shift+a exec urxvt
+bindsym $hyp+Shift+f exec termite
+
+
+# move focused window within output
+#
+# keyboard binding
+
+# mouse bindings
+
+
+# ---- CONTAINER CONTROL ----
 # split in horizontal orientation
 bindsym $mod+Shift+v split h
 
@@ -64,7 +114,7 @@ bindsym $mod+Shift+v split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-# bindsym $mod+f fullscreen toggle
+bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacking
@@ -109,25 +159,6 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
-
-# switch workspaces
-bindsym $mod+Control+Left exec i3-ws prev
-bindsym $mod+Control+Right exec i3-ws next
-
-bindsym $mod+Control+a exec i3-ws prev
-bindsym $mod+Control+f exec i3-ws next
-
-bindsym $mod+Control+h exec i3-ws prev
-bindsym $mod+Control+l exec i3-ws next
-
-bindsym $mod+Control+Shift+Left exec i3-ws --ws prev
-bindsym $mod+Control+Shift+Right exec i3-ws --ws next
-
-bindsym $mod+Control+Shift+a exec i3-ws --ws prev
-bindsym $mod+Control+Shift+f exec i3-ws --ws next
-
-bindsym $mod+Control+Shift+h exec i3-ws --ws prev
-bindsym $mod+Control+Shift+l exec i3-ws --ws next
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -202,14 +233,10 @@ bindsym Control+Shift+4 exec shotup # upload selection
 # bindsym Control+Shift+5 # upload clipboard
 bindsym Control+Shift+U exec fileup # upload file
 
-# firefox profile selector
-bindsym $sup+Control+f exec firefox-profile-launcher
-# virtualbox vm selector
-bindsym $sup+Control+v exec virtualbox-launcher
-
 # password manager
 bindsym $mod+x exec passmenu
 
+# ---- COLOURS ----
 # class                 border  backgr. text    indicator
 client.focused          #4c7899 #e61f00 #ffffff #00ccff
 client.focused_inactive #333333 #0a0a0a #ffffff #484e50
@@ -224,4 +251,3 @@ client.background       #ffffff
 bar {
         status_command i3status
 }
-

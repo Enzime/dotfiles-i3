@@ -65,17 +65,22 @@ bindsym $sup+f focus right
 # keyboard bindings
 
 # mouse bindings
-bindsym $hyp+a exec i3-ws --ws prev
-bindsym $hyp+f exec i3-ws --ws next
+# bindsym $hyp+a exec i3-ws --ws --loop prev
+# bindsym $hyp+f exec i3-ws --ws --loop next
 
+bindsym --whole-window $sup+button4 exec i3-ws --ws prev
+bindsym --whole-window $sup+button5 exec i3-ws --ws next
 
 # change output focus
 #
 # keyboard bindings
 
 # mouse bindings
-bindsym $sup+Control+a exec i3-ws prev
-bindsym $sup+Control+f exec i3-ws next
+bindsym $sup+Control+a exec i3-ws --loop prev
+bindsym $sup+Control+f exec i3-ws --loop next
+
+bindsym --whole-window $mod+button4 exec i3-ws prev
+bindsym --whole-window $mod+button5 exec i3-ws next
 
 
 # ---- MOVE WINDOWS ----

@@ -43,21 +43,19 @@ bindsym $mod+w exec rofi -show window
 # change window focus
 #
 # keyboard bindings
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# bindsym $mod+h focus left
+# bindsym $mod+j focus down
+# bindsym $mod+k focus up
+# bindsym $mod+l focus right
 
 # mouse bindings
-bindsym $sup+a focus left
-bindsym $sup+s focus down
-bindsym $sup+d focus up
-bindsym $sup+f focus right
+# bindsym $sup+a focus left
+# bindsym $sup+s focus down
+# bindsym $sup+d focus up
+# bindsym $sup+f focus right
+
+bindsym --whole-window $mod+button4 focus left
+bindsym --whole-window $mod+button5 focus right
 
 
 # change workspace on this output
@@ -74,19 +72,25 @@ bindsym --whole-window $sup+button5 exec i3-ws --ws next
 # change output focus
 #
 # keyboard bindings
+bindsym $mod+Control+h exec i3-ws --loop prev
+bindsym $mod+Control+l exec i3-ws --loop next
 
 # mouse bindings
 bindsym $sup+Control+a exec i3-ws --loop prev
 bindsym $sup+Control+f exec i3-ws --loop next
 
-bindsym --whole-window $mod+button4 exec i3-ws prev
-bindsym --whole-window $mod+button5 exec i3-ws next
+bindsym --whole-window $mod+Control+button4 exec i3-ws prev
+bindsym --whole-window $mod+Control+button5 exec i3-ws next
 
 
 # ---- MOVE WINDOWS ----
 # move focused window within workspaces
 #
 # keyboard bindings
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # mouse bindings
 bindsym $sup+Shift+a move left
@@ -229,7 +233,7 @@ bindsym XF86MonBrightnessDown exec light -U 5
 bindsym XF86MonBrightnessUp exec light -A 5
 
 # lock screen
-bindsym $sup+Control+l exec i3lock-wrapper
+# bindsym $sup+Control+l exec i3lock-wrapper
 
 # uploading utils
 bindsym Control+Shift+2 exec shotup current # upload current window

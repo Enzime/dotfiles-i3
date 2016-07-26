@@ -81,6 +81,7 @@ bindsym $sup+l exec i3-ws --ws --loop next
 bindsym --whole-window $sup+button4 exec i3-ws --ws prev
 bindsym --whole-window $sup+button5 exec i3-ws --ws next
 
+
 # create or change absolute workspace on this output
 #
 # keyboard bindings
@@ -95,6 +96,7 @@ bindsym $mod+8 exec i3-ws --ws 8
 bindsym $mod+9 exec i3-ws --ws 9
 bindsym $mod+0 exec i3-ws --ws 10
 
+
 # change output focus
 #
 # keyboard bindings
@@ -107,6 +109,21 @@ bindsym $sup+Control+f exec i3-ws --loop next
 
 bindsym --whole-window $mod+Control+button4 exec i3-ws prev
 bindsym --whole-window $mod+Control+button5 exec i3-ws next
+
+
+# create or change absolute outputs
+#
+# keyboard bindings
+bindsym $mod+Control+1 exec i3-ws 1
+bindsym $mod+Control+2 exec i3-ws 2
+bindsym $mod+Control+3 exec i3-ws 3
+bindsym $mod+Control+4 exec i3-ws 4
+bindsym $mod+Control+5 exec i3-ws 5
+bindsym $mod+Control+6 exec i3-ws 6
+bindsym $mod+Control+7 exec i3-ws 7
+bindsym $mod+Control+8 exec i3-ws 8
+bindsym $mod+Control+9 exec i3-ws 9
+bindsym $mod+Control+0 exec i3-ws 10
 
 
 # ---- MOVE WINDOWS ----

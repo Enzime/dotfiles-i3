@@ -45,8 +45,9 @@ bindsym $mod+Shift+q kill
 # ---- ROFI ----
 bindsym $mod+d exec rofi -show run
 bindsym $mod+w exec rofi -show window
-# bindsym $sup+Control+f exec firefox-profile-launcher
-# bindsym $sup+Control+v exec virtualbox-launcher
+bindsym $mod+$hyp+f exec firefox-profile-launcher
+bindsym $mod+$hyp+v exec virtualbox-launcher
+bindsym $mod+$hyp+q exec qb-launcher 
 
 
 # ---- CHANGE FOCUS ----

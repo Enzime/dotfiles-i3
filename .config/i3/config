@@ -246,7 +246,7 @@ bindsym Control+Shift+4 exec shotup # upload selection
 bindsym Control+Shift+U exec fileup # upload file
 
 # password manager
-bindsym $mod+x exec passmenu
+bindsym $mod+$hyp+p exec passmenu
 
 
 # ---- i3bar + i3status ----

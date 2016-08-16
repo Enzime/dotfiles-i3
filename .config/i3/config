@@ -33,6 +33,7 @@ client.background       #ffffff
 new_window pixel 1
 
 for_window [instance="^floating$"] floating enable
+for_window [instance="^fullscreen$"] fullscreen
 for_window [instance="^osu!.exe$" title="^osu!cuttingedge .*"] floating enable, fullscreen
 
 # start a terminal

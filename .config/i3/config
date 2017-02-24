@@ -250,11 +250,7 @@ bindsym Control+Shift+U exec fileup # upload file
 bindsym $mod+$hyp+p exec passmenu
 
 
-# ---- i3bar + i3status ----
-bar {
-        status_command i3status
-}
-
-
 # ---- i3 SPECIFIC PROGRAMS ----
 exec i3-ws --init
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh

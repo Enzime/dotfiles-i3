@@ -179,6 +179,8 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# reload Xmodmap
+bindsym Control+$sup+r exec xmodmap ~/.Xmodmap
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -237,7 +239,8 @@ bindsym XF86MonBrightnessDown exec light -U 5
 bindsym XF86MonBrightnessUp exec light -A 5
 
 # lock screen
-# bindsym $sup+Control+l exec i3lock-wrapper
+bindsym Control+$hyp+l exec i3lock
+bindsym Control+$hyp+p exec "i3-nagbar -t error -m 'Power controls' -b 'Shut Down' 'poweroff' -b 'Restart' 'reboot'"
 
 # uploading utils
 bindsym Control+Shift+2 exec shotup current # upload current window

@@ -239,7 +239,7 @@ bindsym XF86MonBrightnessDown exec light -U 5
 bindsym XF86MonBrightnessUp exec light -A 5
 
 # lock screen
-bindsym Control+$hyp+l exec "i3lock -i ~/.lockscreen-image && xset dpms force off"
+bindsym Control+$hyp+l exec "xset dpms force off"
 bindsym Control+$hyp+p exec "i3-nagbar -t error -m 'Power controls' -b 'Shut Down' 'poweroff' -b 'Restart' 'reboot'"
 
 # uploading utils
